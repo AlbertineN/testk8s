@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: k8stest-label
+ labels:
+   creation_method: manual
+   env: prod
+spec:
+ containers:
+ - image: figent/k8stest
+   name: label
+   ports:
+   - containerPort: 8080
+     protocol: TCP
